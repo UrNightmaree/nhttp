@@ -1,0 +1,3 @@
+local ver = require "nhttp.version"
+
+print(ver.version)

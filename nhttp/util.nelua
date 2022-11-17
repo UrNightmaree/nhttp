@@ -1,0 +1,5 @@
+require "string"
+
+global function argerror(func: string, argn: number, optmsg: string)
+	error(string.format("Function \"%s\": bad argument #%d (%s)",func,argn,optmsg))
+end

@@ -1,0 +1,28 @@
+require "nhttp.deps.curl"
+require "nhttp.util"
+require "string"
+require "iterators"
+
+local request = @record{}
+
+local curl: *CURL = curl_easy_init()
+
+if not curl then
+	error "Failed to initialized curl!"
+
+global nhttp_RequestOption = @record{
+	timeout: number,
+	followRedirect: boolean
+}
+
+function request.request(method: string,url: string--[[,header: [][]string]])
+	if method:match "^%s+$" or method == "" then
+		argerror("'nttp.request'.request",1,"The string cannot be left empty!")
+	elseif method:match "^%U+$" then
+		argerror("'nhttp.request'.request",1,"The string method must be all uppercase!")
+	end
+
+	if url:match "
+end
+
+request.request("hi","hi")

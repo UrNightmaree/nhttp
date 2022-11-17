@@ -1,0 +1,9 @@
+-- Version of nhttp
+
+local version: type = @record{}
+
+local version.version = "0.1"
+local version.major_version = "0"
+local version.minor_version = "1"
+
+return version
